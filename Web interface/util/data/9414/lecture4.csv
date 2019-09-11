@@ -1,0 +1,32 @@
+﻿What is informed search strategies or Heuristic search strategies?,"Informed or Heuristic search strategies incorporate into
+an evaluation function f() as an estimate of distance to goal. Then use this distance to order the nodes in the queue."
+How many search strategies are there in informed search strategies or Heuristic search strategies?,There are two algorithms. Greedy Search and A* Search
+List some search strategies in informed search strategies or Heuristic search strategies,There are two algorithms. Greedy Search and A* Search
+What are the search strategies belong to informed search strategies or Heuristic search strategies?,There are two algorithms. Greedy Search and A* Search
+What is the evaluation function or Heuristic function f() in Greedy Search?,f(n)=estimate h(n) of cost from node n to goal
+What is the evaluation function or Heuristic function f() in A* Search?,f(n)=g(n)+h(n)
+What is the Heuristic function or evaluation function?,"h(n) = estimated cost of the cheapest path from current node n to goal node. in the area of search, heuristic functions are problem specific functions that provide an estimate of solution cost"
+What is Greedy Best First Search or Greedy Search?,Best-First Search that selects the next node for expansion using the heuristic function for its evaluation function
+What is Best First Search?,Best First Search uses an evaluation function f() to order the nodes in the queue
+What is the function or feature of Greedy Best First Search or Greedy Search?,greedy search minimises the estimated cost to the goal; it expands whichever node n is estimated to be closest to the goal.
+What is the Greedy mean in Greedy Best First Search or Greedy Search?,"It means tries to “bite off” as big a chunk of the solution as possible, without worrying about long-term consequences."
+What is the properties of Greedy Best First Search or Greedy Search?,It is complete. Its time complexity is O(b^m). Its space complexity is O(b^m). It isn't optimal
+Is Greedy Best First Search or Greedy Search complete?,It is complete.
+What is the time complexity of Greedy Best First Search or Greedy Search?,O(b^m)
+What is the space complexity of Greedy Best First Search or Greedy Search?,O(b^m)
+Is Greedy Best First Search or Greedy Search optimal?,It is optimal
+What is the advantage of Greedy Best First Search or Greedy Search?,"Greedy Search has the same deficits as Depth-First Search. However, a good heuristic can reduce time and memory costs substantially"
+What is the Heuristic function or evaluation function of A* search?,A ∗ Search uses evaluation function f(n)=g(n)+h(n). g(n) = cost from initial node to node n. h(n) = estimated cost of cheapest path from n to goal.f(n) = estimated total cost of cheapest solution through node n.
+"What is the relationship between Greedy Search or GS, Uniform Cost Search or UCS and A* search?","Greedy Search minimizes h(n), it is efficient but not optimal or complete. Uniform Cost Search minimizes g(n), it is optimal and complete but not efficient. A* Search minimizes f(n)=g(n)+h(n), it is optimal and complete and efficient.A* search preserve efficiency of Greedy Search but avoid expanding paths that are already expensive"
+"What is the relationship between Greedy Search or GS, Uniform Cost Search or UCS?","Greedy Search minimizes h(n), it is efficient but not optimal or complete. Uniform Cost Search minimizes g(n), it is optimal and complete but not efficient."
+What is the relationship between Greedy Search or GS and A* search?,"Greedy Search minimizes h(n), it is efficient but not optimal or complete. A* Search minimizes f(n)=g(n)+h(n), it is optimal and complete and efficient.A* search preserve efficiency of Greedy Search but avoid expanding paths that are already expensive"
+What is the function or feature of A* Search?," A* Search minimizes f(n)=g(n)+h(n), it is optimal and complete and efficient.A* search preserve efficiency of Greedy Search but avoid expanding paths that are already expensive "
+Is A* Search optimal and complete ?,Yes! Provided h() is admissible in the sense that it never overestimates the cost to reach the goal. A* Search is optimal if h() is admissible.
+When call Heuristic h() of A* Search admissable?,h() is called admissible if ∀n h(n)≤h∗(n) whereh∗(n) is true cost from n to goal
+What is the Properties of A* Search?,"It is complete. Its time complexity is Exponential in [relative error in h× length of solution]
+. Its space keeps all nodes is memory. It is optimal (assuming h() is admissible)."
+What is the time complexity of A* Search?,Exponential in [relative error in h × length of solution]
+What is Iterative Deepening A* Search or ID A* Search?,"Iterative Deepening A ∗ is a low-memory variant of A ∗ which performs a series of depth-first searches, but cuts off each search when the sum f(n)=g(n)+h(n) exceeds some pre-defined threshold.
+"
+Describe Iterative Deepening A* Search or ID A* Search,"Iterative Deepening A ∗ is a low-memory variant of A ∗ which performs a series of depth-first searches, but cuts off each search when the sum f(n)=g(n)+h(n) exceeds some pre-defined threshold."
+How to Find Heuristic Functions?,Admissible heuristics can often be derived from the exact solution cost of a simplified or “relaxed” version of the problem.

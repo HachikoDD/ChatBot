@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+		<title>Management</title>
+		<link rel="shortcut icon" href="../static/logo.jpg">
+		<link rel="stylesheet" type="text/css" href="../static/management/management.css">
+		<script src="https://kit.fontawesome.com/05eb422188.js"></script>
+		<script src="../static/jquery.min.js"></script>
+		<link href="../static/bootstrap.min.css" rel="stylesheet">
+		<script src="../static/bootstrap.min.js"></script>
+		<link href="../static/bootstrap-table.min.css" rel="stylesheet">
+		<script src="../static/bootstrap-table.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header" id = "header">
+			<div class = "logo">
+				<a href="{{ url_for('home') }}">
+					<img src = "../static/logo.png"/>
+				</a>
+			</div>
+				<a class="link_logout" href="{{ url_for('logout') }}">Logout</a>
+		</div>
+        <div class="main">
+            <div class = "right_content" id="right_content">
+				<!-- <table cellpadding = "0" class = "contenttable" id = "contenttable" >
+					<tbody id = "contenttable_tbody">
+
+								</td>
+							<td class ="time">
+								<span title="Tue, 16 Jul 2019, 10:02" id=":3g" aria-label="Tue, 16 Jul 2019, 10:02">
+									<span>10:02</span>
+									</span>
+							</td>
+						</tr>
+						<tr class ="zA">
+							<td class ="status">status</td>
+							<td class ="studentnumber">z5090924</td>
+							<td class ="courseId">COMO9417</td>
+							<td class ="question">
+								How do I initialize the weights when I train a deep neural network
+								<td>
+							<td class ="time">
+								<span title="Tue, 16 Jul 2019, 10:02" id=":3g" aria-label="Tue, 16 Jul 2019, 10:02">
+									<span>10:02</span>
+									</span>
+							</td>
+						</tr>
+						<tr class ="zA">
+							<td class ="status">status</td>
+							<td class ="studentnumber">z5090924</td>
+							<td class ="courseId">COMO9417</td>
+							<td class ="question">
+								How do I initialize the weights when I train a deep neural network?
+								</td>
+							<td class ="time">
+								<span title="Tue, 16 Jul 2019, 10:02" id=":3g" aria-label="Tue, 16 Jul 2019, 10:02">
+									<span>10:02</span>
+									</span>
+							</td>
+						</tr>
+
+					</tbody>
+				</table> -->
+				<div id="reportTableDiv" >
+					<table id="reportTable"></table>
+				</div>
+			</div>
+        </div>
+    </div>
+		<script src="../static/management/management.js"></script>
+		<script src="../static/management/showtable.js"></script>
+		<script src="../static/layer/layer.js"></script>
+</body>
+</html>

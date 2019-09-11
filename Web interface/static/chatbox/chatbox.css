@@ -1,0 +1,259 @@
+.popup-box {
+    bottom: 0;
+    right: 0;
+    height: 592px;
+    width: 500px;
+    position: fixed;
+    display: none;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    z-index: 9999;
+    border-radius: 15px;
+    background: #fff;
+}
+
+.Block{
+    width: 100%;
+    border: 10px;
+    overflow: auto;
+    padding-bottom: 10px;
+}
+
+.outer_box{
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+}
+
+.close_click_btn{
+    float: right;
+    text-decoration: none;
+    margin-top: 13px;
+    margin-right: 15px;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+}
+
+.close_click_btn .fas{
+    color: black;
+}
+
+.chatbox_header{
+  overflow: auto;
+}
+
+#chatbox {
+    overflow-y: auto;
+    height: 540px;
+    width: auto;
+    overflow: auto;
+    border-radius: 15px;
+    /*background: linear-gradient(to right, #879eee, #ba78dc);*/
+    background: #fff;
+}
+
+#userInput {
+    bottom: 0;
+    text-align: center;
+    background-color: #ccc;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 60px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+#textInput {
+  line-height: 38px;
+  border: none;
+  background: #fff;
+  font-weight: 300;
+  border-radius: 20px;
+  color: #777;
+  padding-left: 20px;
+  width: 74%;
+  margin-top: 6px;
+}
+ .buttonInput{
+   margin-top: 6px;
+ }
+
+/* .userText {
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: right;
+    line-height: 30px;
+}
+
+.userText span {
+    background-color: #009688;
+    padding: 10px;
+    border-radius: 2px;
+} */
+
+.userInput{
+    background-color: #009688;
+    border-radius: 15px;
+    margin-top: 20PX;
+    float: right;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.userText {
+    background-color: #009688;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 20px;
+    width:auto;
+    max-width: 400px;
+    height: auto;
+    word-wrap:break-word;
+    margin: 8px;
+    padding: 3px;
+}
+
+.botReply{
+    background-color: #EF5350;
+    margin-top: 20PX;
+    float: left;
+    text-align: left;
+    border-radius: 15px;
+    margin-left: 20px;
+}
+
+.botText {
+    background-color: #EF5350;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 20px;
+    width:auto;
+    max-width: 400px;
+    height: auto;
+    word-wrap:break-word;
+    margin: 8px;
+    padding: 3px;
+}
+/*
+.botText span {
+    background-color: #EF5350;
+    padding: 10px;
+    border-radius: 2px;
+}*/
+
+.LikeOrDisLike{
+    background-color: #009688;
+    border-radius: 15px;
+    padding: 5px;
+    height: 25px;
+    display:flex;
+    justify-content: center;
+}
+
+.LikeOrDisLike .like_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    flex: 1;
+    color: #fff;
+    font-size: 15px;
+}
+
+.LikeOrDisLike .dislike_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    flex: 1;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+#tidbit {
+    position:absolute;
+    bottom:0;
+    right:0;
+    width: 300px;
+}
+
+.popup-box-on{
+  display: block;
+}
+
+.chatnowbt_on{
+  display: block;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  z-index: 9999;
+}
+
+.chatnowbt_off{
+  display: none;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  z-index: 9999;
+}
+
+
+
+@media (max-width: 600px) {
+  .popup-box {
+      bottom: auto;
+      right: auto;
+      height: 637px;
+      width: 100%;
+      z-index: 9999;
+      background: #fff;
+  }
+
+  .outer_box{
+      width: 100%;
+      height: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      position:relative;
+  }
+
+  #userInput {
+      position: absolute;
+      text-align: center;
+      background-color: #ccc;
+      width: 100%;
+      height: 60px;
+      align-items: center;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+  }
+
+  #textInput {
+    line-height: 38px;
+    border: none;
+    background: #fff;
+    font-weight: 300;
+    border-radius: 20px;
+    color: #777;
+    padding-left: 20px;
+    width: 69%;
+    margin-top: 6px;
+  }
+  .botText {
+      max-width: 280px;
+  }
+  .userText {
+      max-width: 280px;
+  }
+}

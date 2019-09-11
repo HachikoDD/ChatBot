@@ -1,0 +1,75 @@
+﻿What is the difference or relationship between reactive agent and planning agent?,"Reactive Agent choose their actions based only on what they currently perceive, or have perceived in the past but a Planning Agent can use Search techniques to plan several steps ahead in order to achieve its goal(s)."
+What is the difference or or relationship between Model-Based agent and planning agent?,"Model-Based Agent choose their actions based only on what they currently perceive, or have perceived in the past but a Planning Agent can use Search techniques to plan several steps ahead in order to achieve its goal(s)."
+What are the search strategies?,There are two classes of search strategies. Uninformed search strategies can only distinguish goal states from non-goal states and Informed search strategies use heuristics to try to get “closer” to the goal
+How many classes does the search strategies have?,There are two classes of search strategies. Uninformed search strategies can only distinguish goal states from non-goal states and Informed search strategies use heuristics to try to get “closer” to the goal Describe the search strategies,There are two classes of search strategies. Uninformed search strategies can only distinguish goal states from non-goal states and Informed search strategies use heuristics to try to get “closer” to the goal
+What is uninformed search strategies?,Uninformed search strategies use only the information available in the problem definition and it is a way to distinguish goal states from non-goal states
+What is informed search strategies?,Informed search strategies is a way to use heuristics to try to get “closer” to the goal
+What is Single-State Task Specification?,"A task is specified by states and actions. It needs to specify the state space, initial state, actions or operators, goal test and path cost."
+How to specify a signal-state task?,"A task is specified by states and actions. It needs to specify the state space, initial state, actions or operators, goal test and path cost."
+How to choose states and actions in real world?,Real world is absurdly complex so state space must be abstracted for problem solving. Abstract state means choosing set of real states. Abstract action means choosing complex combination of real actions. Abstract solution means choosing set of real paths that are solutions in the real world
+How to abstract states and actions in real world?,Real world is absurdly complex so state space must be abstracted for problem solving. Abstract state means choosing set of real states. Abstract action means choosing complex combination of real actions. Abstract solution means choosing set of real paths that are solutions in the real world
+What is Path Search Algorithms?,"Finding state-action sequences that lead to desirable states. Search is a function: solution search(task). The basic idea of that is offline, simulated exploration of state space by generating successors of already-explored states"
+What is the search function?,solution search (task)
+What is the basic idea of search function or Path Search Algorithms?,"Offline, simulated exploration of state space by generating successors of already-explored states (i.e. “expanding” them)"
+What is generating action sequences?,"1. Start with a priority queue consisting of just the initial state. 2. Choose a state from the queue of states which have been generated but not yet expanded. 3. Check if the selected state is a Goal State. If it is, STOP (solution has been found). 4. Otherwise, expand the chosen state by applying all possible transitions and generating all its children. 5. If the queue is empty, Stop (no solution exists). 6. Otherwise, go back to Step 2."
+How to generate action sequences in a search tree?,"1. Start with a priority queue consisting of just the initial state. 2. Choose a state from the queue of states which have been generated but not yet expanded. 3. Check if the selected state is a Goal State. If it is, STOP (solution has been found). 4. Otherwise, expand the chosen state by applying all possible transitions and generating all its children. 5. If the queue is empty, Stop (no solution exists). 6. Otherwise, go back to Step 2."
+What is the step to generate action sequences?,"1. Start with a priority queue consisting of just the initial state. 2. Choose a state from the queue of states which have been generated but not yet expanded. 3. Check if the selected state is a Goal State. If it is, STOP (solution has been found). 4. Otherwise, expand the chosen state by applying all possible transitions and generating all its children. 5. If the queue is empty, Stop (no solution exists). 6. Otherwise, go back to Step 2."
+What is Search Tree?,"Search Tree is superimposed over the state space. Root of search tree is searching node corresponding to the initial state. Leaf nodes of search tree is nodes corresponding to states that have no successors in the tree because they were not expanded or generated no new nodes."
+What is the root of search tree?,Root of search tree is searching node corresponding to the initial state. 
+What is the leaf nodes of a search tree?," Leaf nodes of search tree is nodes corresponding to states that have no successors in the tree because they were not expanded or generated no new nodes."
+What is the data structure for a node in a searching tree?,There are five componments: 1.  Corresponding state 2. Parent node: the node which generated the current node. 3. Operator that was applied to generate the current node. 4. Depth: number of nodes from the root to the current node. 5. Path cost.
+What is the features for a node in a search tree?,There are five componments: 1.  Corresponding state 2. Parent node: the node which generated the current node. 3. Operator that was applied to generate the current node. 4. Depth: number of nodes from the root to the current node. 5. Path cost. Describe a node in a search tree,There are five componments: 1.  Corresponding state 2. Parent node: the node which generated the current node. 3. Operator that was applied to generate the current node. 4. Depth: number of nodes from the root to the current node. 5. Path cost.
+What are the difference or relationship between states and nodes in a search tree?,"A state is (a representation of) a physical configuration and a  node is a data structure constituting part of a search tree includes parent, children, depth, path cost g(x). States do not have parents, children, depth, or path cost and two different nodes can contain the same state."
+How to implement a search tree?,"It can be implemented as a priority queue with the following operations: MAKE-QUEUE(ITEMS), Boolean EMPTY(QUEUE), REMOVE-FRONT(QUEUE), QUEUEING-FUNCTION(ITEMS,QUEUE)."
+What is the function of MAKE-QUEUE(ITEMS) in implementing a search tree?,MAKE-QUEUE ( ITEMS) is used to create queue with given items.
+What is the function of Boolean EMPTY(QUEUE) in implementing a search tree?,Boolean EMPTY ( QUEUE) is used to return TRUE if no items in queue.
+What is the function of REMOVE-FRONT(QUEUE) in implementing a search tree?,"REMOVE-FRONT(QUEUE) is used to remove the item at the front of the queue and return it."
+"What is the function of QUEUEING-FUNCTION(ITEMS, QUEUE) in implementing a search tree?","QUEUEING-FUNCTION(ITEMS, QUEUE) is used to insert new items into the queue."
+What operation do you need to create queue with given items in a search tree?,MAKE-QUEUE(ITEMS)
+What operation do you need to return TRUE if no items in queue in a search tree?,Boolean EMPTY(QUEUE)
+What operation do you need to remove the item at the front of the queue and return it in a search tree?,REMOVE-FRONT(QUEUE)
+What operation do you need to insert new items into the queue in a search tree?,"QUEUEING-FUNCTION(ITEMS, QUEUE)"
+What is the search strategies in a search tree?,A strategy is defined by picking the order of node expansion
+How to define the search strategies in a search tree?,A strategy is defined by picking the order of node expansion
+How to evaluate the search strategies in a search tree?,"Strategies are evaluated along the following dimensions: Completeness, Time Complexity, Space Complexity and Optimality."
+What is completeness mean in search strategies?,It means whether it can find a solution if one exists?
+What is time complexity mean in search strategies?,It means number of nodes generated/expanded
+What is space complexity mean in search strategies?,It means maximum number of nodes in memory
+What is optimality mean in search strategies?,It means whether it can find a least-cost solution?
+How to evaluate the time complexity in search tree?,"Time and space complexity are measured in terms of b – maximum branching factor of the search tree, d – depth of the least-cost solution,m – maximum depth of the state space (may be∞)"
+How to compare algorithms?,"There are two approaches. 1. Benchmarking: run both algorithms on a computer and measure. 2. Analysis of algorithms: mathematical analysis of the algorithm speed"
+What is benchmarking?,"Run two algorithms on a computer and measure speed. Its difference will depend on implementation, compiler, computer, data, network"
+What is Analysis of Algorithms?,Analysis the time complexity of an algorithm and compare its difference.
+How many search strategies are there in uninformed search strategies?,"Breadth First Search, Uniform Cost Search, Depth First Search, Depth Limited Search and Iterative Deepening Search"
+List some search strategies in uninformed search strategies,"Breadth First Search, Uniform Cost Search, Depth First Search, Depth Limited Search and Iterative Deepening Search"
+What are the search strategies belong to uninformed search strategies?,"Breadth First Search, Uniform Cost Search, Depth First Search, Depth Limited Search and Iterative Deepening Search"
+Compare uninformed search strategies and informed search strategies?,Informed search is more efficient than Uninformed search. Uninformed search systematically generates new states and tests them against the goal.
+What is the relationship between uninformed search strategies and informed search strategies?,Informed search is more efficient than Uninformed search. Uninformed search systematically generates new states and tests them against the goal.
+What is the difference between uninformed search strategies and informed search strategies?,Informed search is more efficient than Uninformed search. Uninformed search systematically generates new states and tests them against the goal.
+What is Breadth-First Search or BFS?,"All nodes are expanded at a given depth in the tree before any nodes at the next level are expanded. Expand root first, then all nodes generated by root, then All nodes generated by those nodes, etc."
+Describe Breadth-First Search or BFS,"All nodes are expanded at a given depth in the tree before any nodes at the next level are expanded. Expand root first, then all nodes generated by root, then All nodes generated by those nodes, etc."
+What are the properties of Breadth-First Search or BFS?,It is complete. Its time complexity is O(b^d). Its space complexity is O(b^d). It is optimal.
+What is the biggest problem of Breadth-First Search or BFS?,Space is the big problem for Breadth-First Search; it grows exponentially with depth!
+What is the main drawback or disadvantage of Breadth-First Search or BFS?,Space is the big problem for Breadth-First Search; it grows exponentially with depth!
+What is Uniform-Cost Search or UCS?,"Expand root first, then expand least-cost unexpanded node"
+How to implement Uniform-Cost Search or UCS?,QUEUEING FUNCTION = insert nodes in order of increasing path cost.
+How to implement Breadth-First Search or BFS?,QUEUEING-FUNCTION = put newly generated successors at end of queue
+What is the relationship between Uniform-Cost Search or UCS and Breadth-First Search or BFS?,Uniform-Cost Search can reduce to Breadth First Search when all actions have same cost
+What are the properties of Uniform-Cost Search or UCS?,It is complete. Its time complexity is O(b^⌈C∗/ε⌉). Its space complexity is O(b^⌈C∗/ε⌉). It is optimal.
+What is Depth First Search or DFS?,Expands one of the nodes at the deepest level of the tree
+Describe Depth First Search or DFS,Expands one of the nodes at the deepest level of the tree
+Describe Uniform-Cost Search or UCS,"Expand root first, then expand least-cost unexpanded node"
+How to implement Depth First Search or DFS?,QUEUEING FUNCTION = insert newly generated states at the front of the queue (thus making it a stack ). It also can alternatively be implemented by recursive function calls 
+What are the properties of Depth First Search or DFS?,It isn't complete. Its time complexity is O(b^m). Its space complexity is O(bm). It isn't optimal.
+What is Depth Limited Search or DLS?,Expands nodes like Depth First Search but imposes a cutoff on the maximum depth of path.
+Describe Depth Limited Search or DLS,Expands nodes like Depth First Search but imposes a cutoff on the maximum depth of path.
+What are the properties of Depth Limited Search or DLS?,It is complete. Its time complexity is O(b^k). Its space complexity is O(bk). It isn't optimal.
+What is Iterative Deepening Search or IDS?,"Tries to combine the benefits of depth-first (low memory) and breadth-first (optimal and complete) by doing a series of depthlimited searches to depth 1, 2, 3, etc. Early states will be expanded multiple times, but that might not matter too much because most of the nodes are near the leaves."
+Describe Iterative Deepening Search or IDS,"Tries to combine the benefits of depth-first (low memory) and breadth-first (optimal and complete) by doing a series of depthlimited searches to depth 1, 2, 3, etc. Early states will be expanded multiple times, but that might not matter too much because most of the nodes are near the leaves."
+What are the properties of Iterative Deepening Search or IDS?,It is complete. Its time complexity is O(b^d). Its space complexity is O(bd). It is optimal.
+What is Bidirectional Search or BS?,"Search both forward from the initial state and backward from the goal, and stop when the two searches meet in the middle"
+Describe Bidirectional Search or BS,"Search both forward from the initial state and backward from the goal, and stop when the two searches meet in the middle"
+What are the properties of Bidirectional Search or BS?,It is complete. Its time complexity is O(b^d/2). Its space complexity is O(b^d/2).
+what is the time complexity of breadth first search?,"O(b^d)"
+what is the time complexity of Depth first search?,"O(b^m)"
+what is the time complexity of uniform cost search?,O(b^⌈C∗/ε⌉)

@@ -1,0 +1,60 @@
+﻿How many types of agent are there in COMP9414?,"5, there are reactive agent, model-based agent, planning agent, game playing agent, learning agent"
+What are the types of agent in COMP9414?,"reactive agent, model-based agent, planning agent, game playing agent, learning agent"
+what is the agent model?,It is a model containing agent and environment. These two sections can communicate with percepts and actions
+How many sections or parts are there in agent model?,Two. There are agent and environment
+What is the reactive agent?,"It is a type of agent. Choose the next action based only on what they currently perceive, using a ""policy"" or set of rules which are simple to apply"
+List some examples of reactive agent,"Swiss robots, simulated hockey"
+What is the limitation or drawbacks or disadvantages of reactive agent?,"Sometimes we need to remember previous percepts in order to make sensible choices, but reactive agents have no memory or °∞state°±"
+describe Reactive agent briefly,"It is a type of agent. Choose the next action based only on what they currently perceive, using a ""policy"" or set of rules which are simple to apply, but the limitation is Reactive Agents have no memory or °∞state°±, so unable to base decision on previous observations"
+What is the advantages of Model-Based Agent?,"Model-Based Agent can keep a °∞map°± of the places it has visited, and remember what it perceived there."
+What is the limitation or drawbacks or disadvantages of Model-Based Agent?,"An agent with a world model but no planning can look into the past, but not into the future; it will perform poorly when the task requires any of the following: searching several moves ahead, complex tasks requiring many individual steps and logical reasoning to achieve goals"
+What is the planning agent?,Add a planning section to previous version. It can communicate with the world model and action which is used to make a plan before action
+List some examples of world model,"Transition table, dynamical system, parametric model and knowledge base"
+List some examples of planning,"State-based search, simulation, goals/utility and logical inference"
+what is faking agent?,Sometimes an agent may appear to be planning ahead but is actually just applying reative rules.
+What is the game playing agent?,Add an opponent model to the world model which can be used to adjust the previous world model at any time
+What is learning agent?,"Each part in the agent can use learning from plenty of data and training. World Model use Bayesian Learning, planing part use inference learning, perception part use statistical learning and action part use reinforcement learning"
+what is learning?,"Learning is not a separate module, but rather a set of techniques for improving the existing modules"
+Is learning nesserary in the learning agent?,"Because it may be difficult or even impossible for a human to design all aspects of the system by hand and the agent may need to adapt to new situations without being re-programmed by a human"
+how to classify tasks?,"By comparing simulated and situated, static and dynamic, discrete and continuous, fully observable and partially observable, deterministic and stochastic, episodic and sequential, known and unknown, single-agent and multi-agent"
+What is agent?,"Agent which can be evaluated empirically, sometimes analysed mathematically is a function from percept sequences to actions. Ideal rational agent would pick actions which are expected to maximise the performance measure"
+What are the components of an agent?,"Performance measure, environment, actuators and sensors"
+What are the PEAS model of an agent?,"Performance measure, environment, actuators and sensors"
+List some examples of an agent,"Playing chess, antomated taxi."
+Describe the environment of wumpus world,Squares adjacent to Wumpus are Smelly and squares adjacent to Pit are Breezy. Glitter iff Gold is in the same square. Use up the only arrow to kill Wumpus if you are facing it and picks up Gold if in same square
+Describe the rules of wumpus world,Squares adjacent to Wumpus are Smelly and squares adjacent to Pit are Breezy. Glitter iff Gold is in the same square. Use up the only arrow to kill Wumpus if you are facing it and picks up Gold if in same square
+what is shoot in wumpus world?,Shoot is using up the only arrow to kill Wumpus if you are facing it
+what is grab in wumpus world?,Grab is picking up Gold if in same square
+what is peformance measure in wumpus world?,"Performance measure is returning with Gold +1000, death -1000 and -1 per step, -10 for using the arrow"
+What are actuators in wumpus world?,"Left, Right, Forward, Grab, Shoot"
+What are sensors in wumpus world?,"Breeze, Glitter, Stench"
+Describe the rule of exploring a wumpus world,Squares adjacent to Wumpus are Smelly and squares adjacent to Pit are Breezy. Glitter iff Gold is in the same square. Use up the only arrow to kill Wumpus if you are facing it and picks up Gold if in same square
+How to explore a wumpus world?,Squares adjacent to Wumpus are Smelly and squares adjacent to Pit are Breezy. Glitter iff Gold is in the same square. Use up the only arrow to kill Wumpus if you are facing it and picks up Gold if in same square
+What is simulated environment type?,"a separate program is used to simulate an environment, feed percepts to agents, evaluate performance, etc"
+What is static environment type?,environment doesn°Øt change while the agent is deliberatin g
+What is discrete environment type?,finite (or countable) number of possible percepts/actions
+What is Fully Observable environment type?,percept contains all relevant information about the world
+What is deterministic environment type?,current state of world uniquely determines the next
+What is episodic environment type?,every action by the agent is evaluated independently
+What is known environment type?,"the rules of the game, or physics/dynamics of the environment are known to the agent"
+What is Single-Agent environment type?,only one agent acting in the environment
+What is situated environment type?,the agent acts directly on the actual environment
+What is embodied environment type?,the agent has a physical body in the world
+"If Chess is played on a physical board with actual pieces, would it become embodied?","Yes it would; however, we normally °∞abstract°± away the game itself (choice of moves), and treat the movement of the pieces as a separate task."
+What is dynamic environment type?,the environment may change while the agent is thinking
+What is continuous environment type?,"states, percepts or actions can vary continuously"
+What is Partially Observable environment type?,some relevant information is hidden from the agent
+What is stochastic environment type?,there is some random element involved
+What is sequential environment type?,the agent is evaluated based on a long sequence of actions
+What is examples of Single-Agent tasks?,"solving puzzles like Sudoku, or Rubik°Øs cube and Solitaire card games"
+What is environment type of Wumpus World?,"Wumpus World is Simulated, Static, Discrete, Sequential,Partially Observable,Deterministic Single-Agent and Known"
+Why is wumpus world partially observable?,Because you don°Øt know where the Wumpus is.
+Why is wumpus world Deterministic?,"Because the location of the Wumpus, Gold and Pits are determined at th e beginning and don°Øt change after that"
+Why is wumpus world Single-Agent?,"We consider the Wumpus as a °∞natural feature°±, because it doesn°Øt move and can°Øt make an y choices."
+What is environment type of Backgammon or Dice Games?,"Like Chess, Backgammon is Simulated, Static, Discrete, Sequential, Known, Fully Observable Stochastic and Multi-Agent"
+What is environment type of Card Games?,"Card Games like Poker, Rummy or Mahjong are Simulated, Static, Discrete, Sequential, Known Stochastic, Deterministic, Partially Observable and Multi-Agent."
+Why are card games Deterministic?,"Because the cards are shuffled only once, before the game begins."
+Why are card games Partially Observable?,"Because each player can see their own cards but
+not those of other players."
+Show an example which is situated but not embodied,High frequency stock trading system
+Show an example which is Embodied but not Situated,an industrial spray painting robot

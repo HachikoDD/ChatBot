@@ -1,0 +1,220 @@
+/*body {
+    font-family: Garamond;
+    background: linear-gradient(to right, #879eee, #ba78dc);
+}*/
+
+.Block{
+    width: 100%;
+    border: 10px;
+    overflow: auto;
+}
+
+.outer_box{
+    width: 50%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+}
+
+#chatbox {
+    background-color: #fff;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    height: 555px;
+    overflow: auto;
+    background: linear-gradient(to right, #879eee, #ba78dc);
+}
+
+#userInput {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: #ccc;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    align-items: center;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+#textInput {
+    background-color: #fff;
+    width: 87%;
+    border: none;
+    border-bottom: 3px solid #ffcc00;
+    font-family: monospace;
+    font-size: 17px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+    padding-left: 5px;
+    border-radius: 15px;
+    outline:none;
+}
+
+#buttonInput {
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #007bff;
+    border:none;
+    text-align: center;
+    padding-top: 1px;
+    outline:none;
+    cursor: pointer
+}
+
+/* .userText {
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    text-align: right;
+    line-height: 30px;
+}
+
+.userText span {
+    background-color: #009688;
+    padding: 10px;
+    border-radius: 2px;
+} */
+
+.userInput{
+    background-color: #009688;
+    border-radius: 15px;
+    margin-top: 20PX;
+    float: right;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.userText {
+    background-color: #009688;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 20px;
+    width:auto;
+    max-width: 400px;
+    height: auto;
+    word-wrap:break-word;
+    margin: 8px;
+    padding: 3px;
+}
+
+.botReply{
+    background-color: #EF5350;
+    margin-top: 20PX;
+    float: left;
+    text-align: left;
+    border-radius: 15px;
+    margin-left: 20px;
+}
+
+.botText {
+    background-color: #EF5350;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 20px;
+    width:auto;
+    max-width: 400px;
+    height: auto;
+    word-wrap:break-word;
+    margin: 8px;
+    padding: 3px;
+}
+/*
+.botText span {
+    background-color: #EF5350;
+    padding: 10px;
+    border-radius: 2px;
+}*/
+
+.LikeOrDisLike{
+    background-color: #009688;
+    border-radius: 15px;
+    padding: 5px;
+    display:flex;
+    justify-content: center;
+}
+
+.LikeOrDisLike .like_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.LikeOrDisLike .dislike_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.setting_btn{
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      text-decoration: none;
+}
+
+.setting_btn .fas{
+      color: black;
+}
+
+#tidbit {
+    position:absolute;
+    bottom:0;
+    right:0;
+    width: 300px;
+}
+
+@media (max-width:1100px){
+  .outer_box {
+      width: 70%;
+      height: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      position:relative;
+  }
+  #userInput {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: #ccc;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    align-items: center;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+}
+
+@media (max-width:800px){
+  .outer_box {
+      width: 80%;
+      height: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      position:relative;
+  }
+  #userInput {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: #ccc;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    align-items: center;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+}

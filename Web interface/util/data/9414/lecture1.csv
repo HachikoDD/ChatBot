@@ -1,0 +1,41 @@
+How to access the course materials?,http://www.cse.unsw.edu.au/~cs9414/
+What is lecturer’s email address?,blair@cse.unsw.edu.au
+what is the planned topics in COMP9414?,"AI,Tasks,Agents,Prolog,Solving Problems by Search,Logic & Uncertainty,Learning"
+what are the classifications in Learning section?,"Learning and Decision Tree, Perceptrons & Neural Networks, Reinforcement Learning"
+How many categories are there in Learning section?,"Three, there are Learning and Decision Tree, Perceptrons & Neural Networks, Reinforcement Learning"
+How to solve problems by search?,"Solving problems by path search, Heuristic Path search, Games and Constraint Satisfaction"
+How many categories are there in Search?,"Four, there are Solving problems by path search, Heuristic Path search, Games and Constraint Satisfaction"
+what are the classifications in Search?,"Solving problems by path search, Heuristic Path search, Games and Constraint Satisfaction"
+Why prolog?,Prolog is very useful for AI and search. It is good for you to see an example of a non-imperative language. logic programming languages like Prolog have recently had a resurgence of popularity in the computing industry
+What are the benefits of Prolog?,Prolog is very useful for AI and search. It is good for you to see an example of a non-imperative language. logic programming languages like Prolog have recently had a resurgence of popularity in the computing industry
+Please describe prolog briefly?,Prolog is very useful for AI and search. It is good for you to see an example of a non-imperative language. logic programming languages like Prolog have recently had a resurgence of popularity in the computing industry
+Could you give some related resources about Prolog?,"Stuart Russell and Peter Norvig, Artificial Intelligence: a Modern Approach, 3rd Edition, Prentice Hall, 2009. Ivan Bratko, Programming in Prolog for Artificial Intelligence, 4th Edition, Pearson, 2013. Nils J. Nilsson, Artificial Intelligence: a New Synthesis, Morgan Kaufmann, 1998. Valentino Braitenberg, Vehicles: Experiments in Synthetic Psychology, MIT Press, 1984."
+Are there some recommended Resources about Prolog?,"Stuart Russell and Peter Norvig, Artificial Intelligence: a Modern Approach, 3rd Edition, Prentice Hall, 2009. Ivan Bratko, Programming in Prolog for Artificial Intelligence, 4th Edition, Pearson, 2013. Nils J. Nilsson, Artificial Intelligence: a New Synthesis, Morgan Kaufmann, 1998. Valentino Braitenberg, Vehicles: Experiments in Synthetic Psychology, MIT Press, 1984."
+How is the score composed of in COMP9414?,40% marks for assignments and 60% marks for written exam
+How does the assessment consist of in COMP9414?,40% marks for assignments and 60% marks for written exam
+How many marks does the assignment account for in COMP9414?,40% marks
+How many marks does the exam account for in COMP9414?,60% marks
+How many marks does the assignment occupied in COMP9414?,40% marks
+How many marks does the exam occupied in COMP9414?,60% marks
+Is there any assignments in COMP9414?,Yes
+Is there a double pass in COMP9414?,"Yes, you need to get at least 16/40 for the assignments and at least 24/60 for the exam."
+Is there any extra mark request in order to pass the course in COMP9414?,"Yes, you need to get at least 16/40 for the assignments and at least 24/60 for the exam."
+could you please describe the assignment type in COMP9414?,"The assignments may, for example, involve writing a program to enable an agent to act in a simulated environment, solve a problem using search techniques, play a game or apply a machine learning algorithm."
+what would the assignment like in COMP9414?,"The assignments may, for example, involve writing a program to enable an agent to act in a simulated environment, solve a problem using search techniques, play a game or apply a machine learning algorithm."
+what is the related courses of COMP9414?,COMP9417 Machine Learning and Data Mining  COMP4418 Knowledge Representation and Reasoning  COMP3431 Robotic Software Architecture  COMP9517 Machine Vision  COMP9444 Neural Networks and Deep Learning
+What is the foundations of AI?,Philosophy (428 B.C — present)  Mathematics (c. 800 — present)  Psychology (1879 — present)  Linguistics (1957 — present)  Computer engineering (1940 — present)  Biocybernetics (1940’s — present)  Neurology (1950’s – present)
+What is the relation between AI and Philosophy?,Mind is like a machine. it operates on knowledge encoded in an “internal language”. thought and reasoning can be used to arrive at the right actions
+What is the relation between AI and Mathematics?,It is tools to manipulate logical statements and manipulate probabilistic statements. It has dynamical systems and RNNs.
+What is the relation between AI and Psychology?,humans and animals are information processing machines
+What is the relation between AI and Linguistics?,language use fits into the ‘information processing machine’ model. It has Chomsky hierarchy and natural language processing
+What is the relation between AI and Engineering?,build computers and robots fast enough to make AI applications and simulation possible. links to mechanical engineering
+What is the relation between AI and Neurobiology?,"Molecular level, single cell recording, cell circuit level, information processing in biological systems"
+What is the relation between AI and Neurology?,Drugs. Learning from disorders and brain scans.
+What are the theories about intelligence?,380BC Plato (Rationalism - innateness)  330BC Aristotle (Empricism - experience)  1641 Descartes (mind-body Dualism)  1781 Kant (Critique of Pure Reason)  1899 Sigmund Freud (Psychology)  1953 B.F. Skinner (Behaviourism)
+Describe the artificial Intelligence in Literature,"Greek Mythology (Pygmalion, Talos)  1580 Rabbi Loew (Golem, a clay man brought to life)  1818 Mary Shelley (Frankenstein)  1883 Carlo Collodi (Pinocchio)  1920 Karel Capek (Rossum’s Universal Robots)  1950 Isaac Asimov (Three Laws of Robotics)  1951 Osamu Tezuka (Astro Boy)"
+Describe the artificial Intelligence origans,1642 Blaise Pascal (mechanical adding machine)  1694 Gottfried Leibniz (mechanical calculator)  1769 Wolfgang von Kempelen (Mechanical Turk)  1837 Charles Babbage & Ada Lovelace (Difference Engine)  1848 George Boole (the Calculus of Logic)  1879 Gottlob Frege (Predicate Logic)  1950 Turing Test  1956 Dartmouth conference
+What is Turing test?,Turing thought a computer would pass this test by end of the 20th century. The Loebner Prize (Turing test) competition is held each year. The “Total Turing Test” allows physical objects to be passed to the machines as well as characters via the teletype.
+Who proposed the tuning test?,It is proposed by Alan Turing in 1950
+What is the aim of Turing test?,the aim is for the computer to imitate a human well enough to fool the human interrogator
+What are the critiques of Turing test?,Misplaced emphasis on abstract reasoning rather than low-level perception and behaviour
+Is there any critiques to Turing test?,"Yes, misplaced emphasis on abstract reasoning rather than low-level perception and behaviour"

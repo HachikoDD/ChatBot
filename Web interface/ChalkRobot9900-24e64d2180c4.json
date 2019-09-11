@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "chalkrobot9900-jflcpo",
+  "private_key_id": "24e64d2180c47ce82c86413f4a60fb610edcb816",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDb5Kue6XZ4JcCP\nHuUYpXk4jEzzIZVsQ1uVkmm7C88N1ENOMLeM2+4HrNR3R87wkWLvIfqBGM3in5Wb\nNcHksRoZmHsIOtPfcFxXAf4NofUqCJWIHpzVG10krtSYDTcbBJR9+3qhqglsoui8\nkOIiffBx7qkTmsgfjNA3d/PPNdTlP2Yg18dthq0Lc9mdHS1iYznTNM+joCJUCll2\n/MSZMnXSx0E/RoyFYbs8zEpXmLdSdyhHOQXQueV4bG2qozj0KUgIdKlXB9jVCWtP\ncZE9dnDC+5RKsGtuKd4U0UlE/R96c9T7++ILNy/tciDMQbzuB8tFJVaPWmkn1bVR\nq+8EU1LNAgMBAAECggEAA5qaLCQ/oZizBjrOnqUfo9JmLVnwjqro1lrW9QBli5Je\nB5W0JxfbO2mjLrRmQGw4sW/CIPX5OPramIXZJAMrgciNblNuuN2MdeLTB3O5v3oO\n/AFccABfJMRvcY4VAQQF3h+cdpYPn3swC1Dok+VAvF8Sp3DS+/QO+ZDeR4nmb7BJ\niS6eYVELqFdKbeodeN8HqskXwgXdWxB7itVG50DyrWzm2Y3T5RdC+/PpycxhAbaA\nGL/pRtBntP8sZv31HtJEcqLwOyoGK+4ceCFxFfM5HQXO3HE0KTRGdCq7jSbErjXN\nmhx0HMbobKTqGfSTOB9vlx4RA0Zvx0hWVSOSDMff4QKBgQD1JEH/ZJ7t0zSaybk5\n1xosC16J9KPhVaVzIUbTuuX4xcsyPez3bhegYmdjKj9lpkln5E+GyYpB8XHUjhui\nko3F+YM8nRG22SSNVczhiScnD5y+Lq/wUW2xBC6Ko8nocFT+jQyHH0TKWSRU/l1O\nqPkeQTnIeQ0Ts/EbsrVK+3coxQKBgQDlohzdGnDSuWKFYJ7p6G9MN0AYt104N/pM\nUhKjH6Nx3afpxOOoXNixFiKZ6zyh+FogpClWcaO3h/y6Oi7YsQo+clfjVzPqELG9\ny4h8DQDVYwRL0INejApMr1LPZNMgPmmqyQNSeNNP5DmLkFieMcgC3rcrXF8yPu2d\nvpsZ2RrSaQKBgQC3FTc9OLcBxAW7vQDbU+02C9+1hMKIXmDM1YOCSknLPF3/zgQW\n32BB5nx0sW7byg90yi0i646YpWxwZRn6lx3PSARd1qkOOKp17CiyIK7fG2fjGhdI\nkmgsFoV0AdOgB5VS76D1ocLMpTrfR4IEZ2p20BwJv26m0nM2Tofb0mcySQKBgQCL\nQR8d2k33DCM53Rkhoin0X0EIfBIU6KVqKQ9SSvp0L8YHFrY0QHHMGi9LhgMT+ia1\nyreiy3FL+DSDvorwL5SVwAOaQyShWhRfk5EmIUCTJuPREhbIfEY2sM+YI32A/ThZ\nMGNKXSlQNofLIfMLpAa17tfHfNHiB5VTZuZp62W/mQKBgQDgphN5f6/rmN2wKfoe\nMQ9qE6ClT4AEBZirgWKPawE84Jj/AMxs5rt0Xzx1ts40jrE/RwrlhIiDnj2OJKiC\nDj2tbHNuVEpD3ep8EFbeODfwB6fJID0DLG8R/VMA3hakCFodbtsZUZ6c83IXOrq4\nPlwLwdDqqpYZI6cLZF7se6KQzg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "dialogflow-hryvto@chalkrobot9900-jflcpo.iam.gserviceaccount.com",
+  "client_id": "101822147561419978383",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-hryvto%40chalkrobot9900-jflcpo.iam.gserviceaccount.com"
+}

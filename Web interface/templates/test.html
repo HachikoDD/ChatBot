@@ -1,0 +1,67 @@
+<link rel="stylesheet" type="text/css" href="../static/chatbox/chatbox.css">
+<script src="../static/chatbox/chatbox.js"></script>
+
+<body>
+<div class="container text-center">
+	<div class="row">
+		<h2>Open in chat (popup-box chat-popup)</h2>
+        <h4>Click Here</h4>
+        <div class="round hollow text-center">
+        <a href="#" class="primary-btn header-btn text-uppercase" id = "addChatbox">Chat Now</a>
+        </div>
+	</div>
+
+  <a class = "setting_btn" href="{{ url_for('management') }}" >
+    <i class="fas fa-window-close"></i>
+  </a>
+
+  <div class="popup-box chat-popup" id = "pop_click">
+    <div class="outer_box">
+      <div id="chatbox">
+        <div class="Block">
+          <div class="botReply">
+            <div class="botText">
+                Hi! I'm Chalk.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="userInput">
+        <input id="textInput" type="text" name="msg" placeholder="Message">
+        <input id="buttonInput" type="submit" value="Send">
+      </div>
+    </div>
+
+      <script>
+        function send_message() {
+          var rawText = $("#textInput").val();
+          if(rawText == ""){
+            alert('Please enter your question！');
+            return;
+          }
+          // var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+           var userHtml = '<div class="Block"><div class="userInput"><div class="userText">' + rawText + '</div></div></div>';
+          $("#textInput").val("");
+          $("#chatbox").append(userHtml);
+          document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+          $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
+          $.get("/send_message", { msg: rawText }).done(function(data) {
+            // var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+            var botHtml = '<div class="Block"><div class="botReply"><div class="botText">'+ data + '</div><div class="LikeOrDisLike"><a class = "like_btn" type="submit" herf="#"><i class="far fa-thumbs-up"></i></a><a class = "dislike_btn" type="submit" herf="#"><i class="far fa-thumbs-down"></i></a></div></div></div>';
+            $("#chatbox").append(botHtml);
+            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+            $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
+          });
+        }
+        $("#textInput").keypress(function(e) {
+            if(e.which == 13) {
+                send_message();
+            }
+        });
+        $("#buttonInput").click(function() {
+          send_message();
+        })
+      </script>
+    </div>
+</div>
+</body>

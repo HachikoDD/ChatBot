@@ -1,0 +1,19 @@
+﻿What are the types of Games in ,"There are two main types? Discrete Games and Continuous, embodied games"
+List some examples of Discrete Games,"chess, checkers, go, othello,backgammon, monopoly,bridge, poker, scrabble"
+What is the features of chess?,"fully observable, deterministic"
+What is the features of checkers?,"fully observable, deterministic"
+What is the features of backgammon?,"fully observable, stochastic"
+What is the features of monopoly?,"fully observable, stochastic"
+What is the features of bridge?,partially observable
+What is the features of poker?,partially observable
+What is the features of scrabble?,partially observable
+"List some examples of Continuous, embodied games Games","robocup soccer, pool (snooker)"
+What is Minimax?,"It is a perfect play for deterministic, perfect-information games. Its idea is to choose move to position with highest minimax value = best achievable payoff against best play"
+What is the relationship between Minimax and Negamax?,"Minimax assumes that all nodes are evaluated with respect to a fixed player (e.g. White in Chess).If we instead assume that each node is evaluated with respect to the player whose turn it is to move, we get a simpler formulation known as Negamax."
+What is Negamax?,Negamax is a algorithm which is similar as Minimax. It assumes that each node is evaluated with respect to the player whose turn it is to move
+How to make the search feasible?,There are two ways. don°Øt search to final position; use heuristic evaluation at the leaves or use ¶¡-¶¬ pruning
+What does ¶¡ means in ¶¡-¶¬ pruning?,"¶¡ is the best value for us found so far, off the current path"
+What does ¶¬ means in ¶¡-¶¬ pruning?,"¶¬ is the best value for opponent found so far, off the current path"
+What does ¶¡ and ¶¬ means in ¶¡-¶¬ pruning?,"¶¡ is the best value for us found so far, off the current path. ¶¬ is the best value for opponent found so far, off the current path"
+What are the Properties of ¶¡-¶¬?,"¶¡-¶¬ pruning is guaranteed to give the same result as minimax, but speeds up the computation substantially. With °∞perfect ordering,°± time complexity = O(b^m/2)"
+What is expectimax?,Expectimax is an adaptation of Minimax which also handles chance nodes.

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../static/chatbox/chatbox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/05eb422188.js"></script>
+  </head>
+  <body>
+      <div class="popup-box chat-popup" id="qnimate">
+        <div class="outer_box">
+          <i class="fas fa-window-close"></i>
+          <div id="chatbox">
+            <div class="Block">
+              <div class="botReply">
+                <div class="botText">
+                    Hi! I'm Chalk.
+                </div>
+              </div>
+            </div>
+            <div class="Block">
+              <div class="botReply">
+                <div class="botText">I didn't get that. Can you repeat?</div>
+                <div class="LikeOrDisLike">
+                  <a class="like_btn" herf="#">
+                    <i class="far fa-thumbs-up" aria-hidden="true"></i>
+                  </a><a class="dislike_btn" type="submit" herf="#">
+                    <i class="far fa-thumbs-down" aria-hidden="true">
+                </i></a>
+                </div></div></div>
+            <div class="Block"><div class="userInput"><div class="userText">dasda</div></div></div>
+            <div class="Block"><div class="botReply"><div class="botText">Can you say that again?</div><div class="LikeOrDisLike"><a class="like_btn" type="submit" herf="#"><i class="far fa-thumbs-up" aria-hidden="true"></i></a><a class="dislike_btn" type="submit" herf="#"><i class="far fa-thumbs-down" aria-hidden="true"></i></a></div></div></div>
+          </div>
+
+          <div id="userInput">
+            <input id="textInput" type="text" name="msg" placeholder="Message">
+            <input id="buttonInput" type="submit" value="Send">
+          </div>
+        </div>
+
+
+
+          <script>
+            function send_message() {
+              var rawText = $("#textInput").val();
+              if(rawText == ""){
+                alert('Please enter your question！');
+                return;
+              }
+              // var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+               var userHtml = '<div class="Block"><div class="userInput"><div class="userText">' + rawText + '</div></div></div>';
+              $("#textInput").val("");
+              $("#chatbox").append(userHtml);
+              document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+              $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
+              $.get("/send_message", { msg: rawText }).done(function(data) {
+                // var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+                var botHtml = '<div class="Block"><div class="botReply"><div class="botText">'+ data + '</div><div class="LikeOrDisLike"><a class = "like_btn" type="submit" herf="#"><i class="far fa-thumbs-up"></i></a><a class = "dislike_btn" type="submit" herf="#"><i class="far fa-thumbs-down"></i></a></div></div></div>';
+                $("#chatbox").append(botHtml);
+                document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
+              });
+            }
+            $("#textInput").keypress(function(e) {
+                if(e.which == 13) {
+                    send_message();
+                }
+            });
+            $("#buttonInput").click(function() {
+              send_message();
+            })
+          </script>
+        </div>
+  </body>
+</html>

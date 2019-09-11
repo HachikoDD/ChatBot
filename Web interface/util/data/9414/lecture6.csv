@@ -1,0 +1,58 @@
+What are the types of Learning?,"Supervised Learning, Reinforcement Learning, Unsupervised Learning"
+List some types of Learning,"Supervised Learning, Reinforcement Learning, Unsupervised Learning"
+List some Learning,"Supervised Learning, Reinforcement Learning, Unsupervised Learning"
+What is supervised Learning?,Supervised Learning is a kind of Learning whose agent is presented with examples of inputs and their target outputs
+What is reinforcement Learning?,"Reinforcement Learning is a kind of Learning whose agent is not presented with target outputs, but is given a reward signal, which it aims to maximize"
+What is unsupervosed Learning?,"Unsupervised Learning is a king of Learning whose agent is only presented with the inputs themselves, and aims to find structure in these inputs"
+Describe the supervised Learning,Supervised Learning is a kind of Learning whose agent is presented with examples of inputs and their target outputs
+Describe the reinforcement Learning,"Reinforcement Learning is a kind of Learning whose agent is not presented with target outputs, but is given a reward signal, which it aims to maximize"
+Describe the unsupervosed Learning,"Unsupervised Learning is a king of Learning whose agent is only presented with the inputs themselves, and aims to find structure in these inputs"
+List some learning paradigms in supervised Learning,"Decision Tree, Neural Network, Support Vector Machine"
+List some examples about supervised Learning,"Decision Tree, Neural Network, Support Vector Machine"
+What is included in supervised Learning?,"Decision Tree, Neural Network, Support Vector Machine"
+What are the issues in supervised Learning?,"Framework, representation, pre-processing/post-processing, training method, generalization, evaluation"
+What are the main steps in supervised Learning?,"Framework, representation, pre-processing/post-processing, training method, generalization, evaluation"
+List the issues in supervised Learning,"Framework, representation, pre-processing/post-processing, training method, generalization, evaluation"
+What is the function of generalization in supervised Learning?,avoid over-fitting
+What is the function of evaluation in supervised Learning?,separate training and testing sets
+What is generalization?,"Provided the training data are not inconsistent, we can split the attributes in any order and still produce a tree that correctly classifies all examples in the training set. This is called generalization."
+What is entropy?,"Entropy is a measure of how much information we gain when the target attribute is revealed to us. In other words, it is not a measure of how much we know, but of how much we don’t know."
+How to calculate entropy?,"If the prior probabilities of the n target attribute values are p1,...,pn then the entropy is H(<p1,...,pn>) =∑-pilog(2)pi"
+What is the formula of entropy?,"If the prior probabilities of the n target attribute values are p1,...,pn then the entropy is H(<p1,...,pn>) =∑-pilog(2)pi"
+What is Laplace Error?,"E=1-(n+1)/(N+k) N = total number of (training) items at the node, n = number of (training) items in the majority class,k = number of classes"
+What is Pruning or Minimal Error Pruning?,"According to Ockham’s Razor, we may wish to prune off branches that do not provide much benefit in classifying the items.When a node becomes a leaf, all items will be assigned to the majority class at that node. We can estimate the error rate on the (unseen) test items using the Laplace error. If the average Laplace error of the children exceeds that of the parent node, we prune off the children."
+When to use Prune or Minimal Error Pruning?,"According to Ockham’s Razor, we may wish to prune off branches that do not provide much benefit in classifying the items.When a node becomes a leaf, all items will be assigned to the majority class at that node. We can estimate the error rate on the (unseen) test items using the Laplace error. If the average Laplace error of the children exceeds that of the parent node, we prune off the children."
+Describe Pruning or Minimal Error Pruning,"According to Ockham’s Razor, we may wish to prune off branches that do not provide much benefit in classifying the items.When a node becomes a leaf, all items will be assigned to the majority class at that node. We can estimate the error rate on the (unseen) test items using the Laplace error. If the average Laplace error of the children exceeds that of the parent node, we prune off the children."
+What are the advantages of Decision Tree?,It improves generalisation by building a smaller tree (using entropy) and prunes nodes based on Laplace error
+What is Decision Tree?,"A decision tree is a decision support tool that uses a tree-like model of decisions and their possible consequences, including chance event outcomes, resource costs, and utility. It is one way to display an algorithm that only contains conditional control statements."
+Describe Decision Tree,"A decision tree is a decision support tool that uses a tree-like model of decisions and their possible consequences, including chance event outcomes, resource costs, and utility. It is one way to display an algorithm that only contains conditional control statements."
+What is Neural Network?,"A neural network is a network or circuit of neurons, or in a modern sense, an artificial neural network. Neural Networks are made up of nodes which have inputs edges, each with some weight, outputs edges (with weights) and an activation level (a function of the inputs)"
+What does Neural Network make up of?,"Neural Networks are made up of nodes which have inputs edges, each with some weight, outputs edges (with weights) and an activation level (a function of the inputs)"
+What is include in Neural Network?,"Neural Networks are made up of nodes which have inputs edges, each with some weight, outputs edges (with weights) and an activation level (a function of the inputs)"
+What does Neural Network composed of?,"Neural Networks are made up of nodes which have inputs edges, each with some weight, outputs edges (with weights) and an activation level (a function of the inputs)"
+What are the weights in Neural Network?,Weights can be positive or negative and may change over time (learning)
+What is the input function in Neural Network?,The input function is the weighted sum of the activation levels of inputs.
+What is the activation level in Neural Network?,The activation level is a non-linear transfer function g of this input: activationi = g(si) = g(∑jwi jxj)
+what kind of functions can a perceptron compute?,linearly separable functions
+What is Perceptron Learning Rule?,"Adjust the weights as each input is presented.use s=w1x1+w2x2+w0, if g(s)=0 but should be 1, s=s+η(a+∑(xk)^2), if g(s)=1 but should be 0, s=s-η(a+∑(xk)^2), otherwise, weights are unchanged"
+What is Constraint Satisfaction Problems or CSPs?,"Constraint Satisfaction Problems are defined by a set of variables Xi , each with a domain Di of possible values, and a set of constraints C"
+Describe Constraint Satisfaction Problems or CSPs,"Constraint Satisfaction Problems are defined by a set of variables Xi , each with a domain Di of possible values, and a set of constraints C"
+What is the aim of Constraint Satisfaction Problems or CSPs,The aim is to find an assignment of the variables Xi from the domains Di in such a way that none of the constraints C are violated.
+What is the intention of Constraint Satisfaction Problems or CSPs,The aim is to find an assignment of the variables Xi from the domains Di in such a way that none of the constraints C are violated.
+What is Backtracking Search?,"CSPs can be solved by assigning values to variables one by one, in different combinations. Whenever a constraint is violated, we go back to the most recently assigned variable and assign it a new value."
+How to implement Backtracking Search?,"This can be achieved by a Depth First Search on a special kind of state space, where states are defined by the values assigned so far: Initial state: the empty assignment.Successor function: assign a value to an unassigned variable that does not conflict with previously assigned values of other variables. (If no legal values remain, the successor function fails.).Goal test: all variables have been assigned a value, and no constraint
+s have been violated."
+What is the relationship between Path Search and Constraint Satisfaction?,Constraint Satisfaction Problems is difficult part is knowing the final state and how to get there is easy. Path Search Problems is difficult part is how to get there and knowing the final state is easy.
+Compare Path Search and Constraint Satisfaction,Constraint Satisfaction Problems is difficult part is knowing the final state and how to get there is easy. Path Search Problems is difficult part is how to get there and knowing the final state is easy.
+What is Minimum Remaining Values or MRV?,Choose the variable with the fewest legal values
+What is Least Constraining Value?,"Given a variable, choose the least constraining value: the one that rules out the fewest values in the remaining variables"
+What is Forward checking?,Keep track of remaining legal values for unassigned variables and terminate search when any variable has no legal values
+What is Arc consistency?,"Simplest form of constraint propagation makes each arc consistent. X→Y is consistent if for every value x of X there is some allowed y
+"
+What is Local Search?,"These algorithms assign all variables randomly in the beginning (thus violating several constraints), and then change one variable at a time, trying to reduce the number of violations at each step"
+What is knowledge base?,A Knowledge Base is a set of sentences in a formal language.
+What is the function of knowledge base?,"Tell the system what it needs to know, then it can Ask itself what it needs to do. Answers should follow from the KB"
+What is Logic in general?,Logics are formal languages for representing information such that conclusions can be drawn.
+What is Logic?,Logics are formal languages for representing information such that conclusions can be drawn.
+What is entailment?,Entailment means that one thing follows from another:KB |= α(Knowledge base KB entails sentence α if and only if α is true in all worlds where KB is true)
+What is Gradient Descent?,Recall that the error function E is (half) the sum over all input patterns of the square of the difference between actual output and desired output E=1/2*∑(z−t)^2

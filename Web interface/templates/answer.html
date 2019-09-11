@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="../static/img/fav.png">
+  <!-- Author Meta -->
+  <meta name="author" content="codepixer">
+  <!-- Meta Description -->
+  <meta name="description" content="">
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+  <!-- Site Title -->
+  <title>Robotics</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../static/answer/answer.css">
+    <link rel="stylesheet" href="../static/wangEditor.min.css">
+  </head>
+  <body class="answer_body">
+            <div class="wrapper">
+              <div class="question_given">Question:</div>
+              <div style="display: none;" id = "question_id"></div>
+              <div class="question_content" id = "question_content">How do I initialize the weights when I train a deep neural network?</div>
+              <div id="editor">
+
+              </div>
+              <div class="col-lg-12 d-flex justify-content-between">
+                <div class="alert-msg" style="text-align: left;"></div>
+                <button id = "loading" class="nw-btn primary-btn anwser_btn" style="float: right;" onclick="UpdateStatus()">Submit</button>
+              </div>
+
+						</div>
+            <script type="text/javascript"  src="../static/jquery.min.js"></script>
+            <script type="text/javascript"  src="../static/layer/layer.js"></script>
+            <script type="text/javascript" src="../static/answer/answer.js"></script>
+            <script type="text/javascript" src="../static/wangEditor.min.js"></script>
+            <script type="text/javascript">
+                var E = window.wangEditor
+                var editor = new E('#editor')
+                editor.customConfig.colors = [
+                  '#000000'
+                ]
+                editor.customConfig.lang = {
+                    '设置标题': 'title',
+                    '正文': 'p',
+                    '链接文字': 'link text',
+                    '链接': 'link',
+                    '上传图片': 'upload image',
+                    '上传': 'upload',
+                    '创建': 'init',
+                    '字号': 'font size',
+                    '字体': 'font',
+                    '文字颜色': 'fontcolor',
+                    '背景色': 'backgoround color',
+                    '设置列表': 'list',
+                    '有序列表': 'order',
+                    '无序列表': 'dot',
+                    '对齐方式': 'align',
+                    '靠左': 'left',
+                    '居中': 'center',
+                    '靠右': 'right',
+                    '默认': 'default',
+                    '新浪': 'sina',
+                    '插入表格': 'table',
+                    '网络图片': 'picture',
+                    '图片link': 'code',
+                    '行': 'table',
+                    '格式如': 'format',
+                    '插入视频': 'video',
+                    '插入代码': 'code',
+                    '插入': 'insert'
+                }
+                editor.create()
+            </script>
+          </body>
+        </html>

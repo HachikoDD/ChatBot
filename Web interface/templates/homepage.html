@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="../static/logo.jpg">
+  <!-- Author Meta -->
+  <meta name="author" content="Ding">
+  <!-- Meta Description -->
+  <meta name="description" content="">
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+  <!-- Site Title -->
+  <title>Chalk</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="../static/linearicons.css">
+    <link rel="stylesheet" href="../static/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/bootstrap.css">
+    <link rel="stylesheet" href="../static/magnific-popup.css">
+    <link rel="stylesheet" href="../static/nice-select.css">
+    <link rel="stylesheet" href="../static/hexagons.min.css">
+    <link rel="stylesheet" href="../static/animate.min.css">
+    <link rel="stylesheet" href="../static/owl.carousel.css">
+    <link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" type="text/css" href="../static/chatbox/chatbox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/05eb422188.js"></script>
+  </head>
+  <body id=body οnscrοll=SetCookie("scroll",body.scrollTop); οnlοad="scrollback();">
+    <a class="primary-btn chatnowbt_off text-uppercase"  id = "bt_chatnow" href="#"  >Chat Now</a>
+    <div class="popup-box chat-popup" id="pop_click">
+      <div class="chatbox_header">
+        <a class = "close_click_btn" id = "removeClass" href="#" >
+          <i class="fas fa-window-close"></i>
+        </a>
+      </div>
+      <div class="outer_box">
+        <div id="chatbox">
+          <div class="Block">
+            <div class="botReply">
+              <div class="botText">
+                  Hi! I'm Chalk.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="userInput">
+          <input id="textInput" type="text" name="msg" placeholder="Message">
+          <input  id="buttonInput" class="primary-btn buttonInput" type="submit" value="Send">
+        </div>
+      </div>
+
+        <script>
+          var transactionId = 1;
+          function send_message() {
+            var rawText = $("#textInput").val();
+            if(rawText == ""){
+              alert('Please enter your question！');
+              return;
+            }
+            // var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
+             var userHtml = '<div class="Block"><div class="userInput"><div class="userText" id="useruserText'+transactionId+'">' + rawText + '</div></div></div>';
+            $("#textInput").val("");
+            $("#chatbox").append(userHtml);
+            document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+            $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
+            $.ajax({
+                  url: '/send_message',
+                  type: 'post',
+                  dataType: 'json',
+                  contentType: 'application/json',
+                  success: function (data) {
+                      var response = $.parseJSON(JSON.stringify(data));
+                      response_text = response['message'];
+                      response_type = response['questionType'];
+                      course = response['course'];
+                      if(response_type == "1"){
+                        var botHtml = '<div class="Block"><div class="botReply"><div class="botText" id="useruserText'+transactionId+'">'+ response_text + '</div><div class="LikeOrDisLike"><a class = "like_btn" href="javascript:void(0);" onclick="clicklike(this)" id="like'+transactionId+'"><i class="far fa-thumbs-up"></i></a><a class = "dislike_btn" href="javascript:void(0);" onclick="clickdislike(this)" id="dislike'+transactionId+'" value="'+rawText+'"course="'+course+'"><i class="far fa-thumbs-down"></i></a></div></div></div>';
+                      }else{
+                        var botHtml = '<div class="Block"><div class="botReply"><div class="botText" id="useruserText'+transactionId+'">'+ response_text + '</div></div></div>';
+                      }
+                      $("#chatbox").append(botHtml);
+                      document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                      $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
+                  },
+                  data: getJson(rawText)
+              });
+            // $.post("/send_message", { json_string:JSON.stringify({msg: rawText}) }).done(function(data) {
+            //   // var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+            //   var botHtml = '<div class="Block"><div class="botReply"><div class="botText" id="useruserText'+transactionId+'">'+ data + '</div><div class="LikeOrDisLike"><a class = "like_btn" href="javascript:void(0);" onclick="clicklike(this)" id="like'+transactionId+'"><i class="far fa-thumbs-up"></i></a><a class = "dislike_btn" href="javascript:void(0);" onclick="clickdislike(this)" id="dislike'+transactionId+'" value="'+rawText+'"><i class="far fa-thumbs-down"></i></a></div></div></div>';
+            //   $("#chatbox").append(botHtml);
+            //   document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+            //   $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
+            // });
+            transactionId = transactionId + 1;
+          }
+          $("#textInput").keypress(function(e) {
+              if(e.which == 13) {
+                  send_message();
+              }
+          });
+          $("#buttonInput").click(function() {
+            send_message();
+          })
+
+          function getJson(rawText){
+            var json =
+              {
+                  "msg": rawText
+              };
+              return JSON.stringify(json)
+          }
+        </script>
+      </div>
+
+      <header id="header" id="home">
+        <div class="container main-menu">
+          <div class="row align-items-center justify-content-between d-flex">
+            <div id="logo">
+              <a href="{{ url_for('home') }}"><img src="../static/logo.png" alt="" title="" /></a>
+            </div>
+            <nav id="nav-menu-container">
+              <ul class="nav-menu">
+                <li><a href="{{ url_for('login') }}">Admin login</a></li>
+              </ul>
+            </nav><!-- #nav-menu-container -->
+          </div>
+        </div>
+      </header><!-- #header -->
+
+    <!-- start banner Area -->
+    <section class="banner-area" id="home">
+      <div class="container">
+        <div class="row fullscreen d-flex align-items-center justify-content-center">
+          <div class="banner-content col-lg-6 col-md-6">
+            <h1>
+              Smart <br>
+              ChatBot for Student <br>
+              Learning
+            </h1>
+            <p class="text-white text-uppercase">
+              An innovation way to help student
+            </p>
+            <a href="#" class="primary-btn header-btn text-uppercase" id = "addChatbox">Chat Now</a>
+          </div>
+          <div class="banner-img col-lg-6 col-md-6">
+            <img class="img-fluid" src="../static/img/banner-img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!-- Start feature Area -->
+    <section class="feature-area section-gap">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="single-feature">
+              <a href="#" class="title d-flex flex-row">
+                <span class="lnr lnr-user"></span>
+                <h4>Feedback System</h4>
+              </a>
+              <p>
+                Student can like or dislike robot answer and forward this question to the teacher to improve the answer. Chalk will let you know when the answer is updated.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="single-feature">
+              <a href="#" class="title d-flex flex-row">
+                <span class="lnr lnr-rocket"></span>
+                <h4>Highly Response Speed</h4>
+              </a>
+              <p>
+                Students usually get answers within 1 min.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="single-feature">
+              <a href="#" class="title d-flex flex-row">
+                <span class="lnr lnr-bubble"></span>
+                <h4>Social Media Port</h4>
+              </a>
+              <p>
+                Chalk hill connected to common social media, for example, Twitter and Facebook.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End feature Area -->
+
+    <!-- start footer Area -->
+    <footer class="footer-area section-gap">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6  col-md-12">
+            <div class="single-footer-widget newsletter">
+              <h6>Newsletter</h6>
+              <p>You can trust us. we only send promo offers, not a single spam.</p>
+              <div id="mc_embed_signup">
+                <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+
+                  <div class="form-group row" style="width: 100%">
+                    <div class="col-lg-8 col-md-12">
+                      <input name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+                      <div style="position: absolute; left: -5000px;">
+                        <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12">
+                      <button class="nw-btn primary-btn">Subscribe<span class="lnr lnr-arrow-right"></span></button>
+                    </div>
+                  </div>
+                  <div class="info"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row footer-bottom d-flex justify-content-between">
+          <p class="col-lg-8 col-sm-12 footer-text m-0 text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          <div class="col-lg-4 col-sm-12 footer-social">
+            <a href="https://www.facebook.com/UNSWChalk/?modal=admin_todo_tour"><i class="fab fa-facebook-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End footer Area -->
+
+    <script src="../static/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../static/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="../static/easing.min.js"></script>
+    <script src="../static/hoverIntent.js"></script>
+    <script src="../static/superfish.min.js"></script>
+    <script src="../static/jquery.ajaxchimp.min.js"></script>
+    <script src="../static/jquery.magnific-popup.min.js"></script>
+    <script src="../static/owl.carousel.min.js"></script>
+    <script src="../static/hexagons.min.js"></script>
+    <script src="../static/jquery.nice-select.min.js"></script>
+    <script src="../static/jquery.counterup.min.js"></script>
+    <script src="../static/waypoints.min.js"></script>
+    <script src="../static/mail-script.js"></script>
+    <script src="../static/main.js"></script>
+    <script src="../static/chatbox/chatbox.js"></script>
+    <script src="../static/chatbox/chatboxbt.js"></script>
+    <script src="../static/layer/layer.js"></script>
+    <script src="../static/chatbox/likeordislike.js"></script>
+  </body>
+</html>
